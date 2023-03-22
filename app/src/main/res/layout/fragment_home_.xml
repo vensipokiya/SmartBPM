@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lite_pink"
-    android:gravity="start"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
+    android:layout_gravity="center"
+    android:background="@color/lite_pink"
+    tools:context=".Fragments.Home_Fragment">
 
     <LinearLayout
-        android:id="@+id/mn_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -29,7 +28,7 @@
                 android:text="Home"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12sdp"
+                android:textSize="@dimen/_14sdp"
                 android:textStyle="bold" />
 
             <View
@@ -56,9 +55,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal"
                     android:background="@drawable/bg_white"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="@dimen/_5sdp">
 
                     <ImageView
                         android:id="@+id/img_hart_rate"
@@ -85,10 +84,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:background="@drawable/bg_white"
-                    android:orientation="horizontal">
+                    android:background="@drawable/bg_white">
 
                     <ImageView
                         android:id="@+id/img_bp"
@@ -141,6 +140,7 @@
                             android:id="@+id/img_daily_challenge"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="@dimen/_70sdp"
+
                             android:src="@drawable/daily_challenge" />
 
 
@@ -207,6 +207,7 @@
                             android:id="@+id/img_step_counter"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="@dimen/_70sdp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/step_counter" />
 
 
@@ -236,7 +237,7 @@
                             android:id="@+id/img_cholesterol"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="@dimen/_70sdp"
-                            android:src="@drawable/weight_bmi" />
+                            android:src="@drawable/cholesterol" />
 
 
                     </LinearLayout>
@@ -331,7 +332,7 @@
             android:background="@android:color/transparent"
             app:elevation="0dp"
             app:itemIconTint="#1E2D4C"
-            app:menu="@menu/menu" />
+            app:menu="@menu/menu"/>
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -342,10 +343,8 @@
         android:adjustViewBounds="true"
         android:backgroundTint="@color/black"
         android:src="@drawable/heart"
+        app:maxImageSize="@dimen/_25sdp"
         app:borderWidth="@dimen/_2sdp"
         app:layout_anchor="@id/BottomAppBar"
-        app:maxImageSize="@dimen/_25sdp"
         app:tint="#f07d96" />
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

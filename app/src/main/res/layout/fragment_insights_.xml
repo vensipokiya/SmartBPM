@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Insights_Fragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:padding="@dimen/_7sdp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_insights"
+            android:text="insights"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info and Knoladge"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/Gray" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_bp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white"
+            android:backgroundTint="#f5f2a6"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="Blood Pressure"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:src="@drawable/bp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gart_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white"
+            android:backgroundTint="#afbee0"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="Hart Rate"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:src="@drawable/hart_rate2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_blood_sugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white"
+            android:backgroundTint="#b9f7b7"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="Blood Sugar"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:src="@drawable/body_sugar" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_body_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white"
+            android:backgroundTint="#f7d8d7"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="Body Weight"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:src="@drawable/body_weight" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_cholesterol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white"
+            android:backgroundTint="#bbfafc"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="Cholesterol"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:src="@drawable/cholesterol2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_diet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white"
+            android:backgroundTint="#e3cdf7"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="Healthy Diet"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:src="@drawable/healthyfood" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
