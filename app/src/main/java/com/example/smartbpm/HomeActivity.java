@@ -45,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_menu);
         frameLayout=findViewById(R.id.frameLayout);
+        floatingActionButton=findViewById(R.id.heart_rate);
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, home_fragment).commit();
@@ -70,11 +71,11 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-//        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(HomeActivity.this, "this is floating bar", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeActivity.this, "this is floating bar", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
