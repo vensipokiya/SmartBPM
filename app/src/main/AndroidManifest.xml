@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartBPM"
         tools:targetApi="31">
+        <activity
+            android:name=".Home_Heart_rate.Food_Scanner_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Heart_rate.Blood_Sugar_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Heart_rate.Cholesterol_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Heart_rate.Step_Counter_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Heart_rate.Weight_BMI_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Heart_rate.Blood_pressure_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Heart_rate.Daily_challenge_Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home_Heart_rate.Heart_Rate_Activity"
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

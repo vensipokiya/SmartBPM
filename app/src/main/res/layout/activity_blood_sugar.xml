@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:background="@color/Red2"
+    tools:context=".Home_Heart_rate.Blood_Sugar_Activity">
+
+    <LinearLayout
+        android:id="@+id/ll_blood_sugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_chevron_left_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Blood Sugar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@id/ll_blood_sugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/black" />
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_add_manually"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="start">
+
+                        <ImageView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/blood_sugar" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="Analyze your Blood Suagr to see if it is normal"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_analyze"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:backgroundTint="@color/Dark_Gray"
+                        android:text="Analyze"
+                        android:textSize="@dimen/_12sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_history"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="start">
+
+                        <ImageView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/history" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="Check the records of your measurements"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:backgroundTint="@color/Dark_Gray"
+                        android:text="History"
+                        android:textSize="@dimen/_12sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_trends"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="start">
+
+                        <ImageView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/trends" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="Get details analysis of short, medium, and long term trends"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_trends"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:backgroundTint="@color/Dark_Gray"
+                        android:text="Trends"
+                        android:textSize="@dimen/_12sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_statistics"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="start">
+
+                        <ImageView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/statistics" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="View the detailed range and distribution of your mesurement"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:backgroundTint="@color/Dark_Gray"
+                        android:text="Statistics"
+                        android:textSize="@dimen/_12sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_set_alarms"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="start">
+
+                        <ImageView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/set_alarms" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="Get details analysis of short, medium, and long term trends"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_set_alarms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:backgroundTint="@color/Dark_Gray"
+                        android:text="set Alarms"
+                        android:textSize="@dimen/_12sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cv_export_data"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="start">
+
+                        <ImageView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/export_data" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="Exprot all your yealth data reports for further analysis and medical consultation"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_export_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:backgroundTint="@color/Dark_Gray"
+                        android:text="Export Data"
+                        android:textSize="@dimen/_12sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
