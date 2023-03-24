@@ -9,7 +9,7 @@
         android:icon="@drawable/baseline_insights_24"
         android:title="INSIGHTS" />
 
-    <item android:id="@+id/heart_rate"
+    <item
         android:title=""
         android:enabled="false"/>
 
