@@ -11,10 +11,11 @@ import android.widget.TextView;
 
 import com.example.smartbpm.R;
 
-public class Add_Manually_Activity extends AppCompatActivity implements  NumberPicker.OnValueChangeListener {
+public class Add_Manually_Activity extends AppCompatActivity implements NumberPicker.OnValueChangeListener {
 
-    ImageView img_bpm,img_back;
-    TextView tv_btm ,tv_bpm_discription_short,tv_bpm_discription,tv_age_num,tv_gender;
+    ImageView img_bpm, img_back;
+    TextView tv_btm, tv_bpm_discription_short, tv_bpm_discription, tv_age_num, tv_gender;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class Add_Manually_Activity extends AppCompatActivity implements  NumberP
         numberPicker.setFormatter(new NumberPicker.Formatter() {
             @Override
             public String format(int i) {
-                return String.format("%02d",i);
+                return String.format("%02d", i);
             }
         });
         numberPicker.setOnValueChangedListener(this);
@@ -51,10 +52,9 @@ public class Add_Manually_Activity extends AppCompatActivity implements  NumberP
 
     @Override
     public void onValueChange(NumberPicker numberPicker, int i, int i1) {
-      if (numberPicker.setMinValue(40-59){
-          tv_btm.setText("Slow");
-
-        }
+//        if (numberPicker.setMinValue(40 - 59)) {
+//            tv_btm.setText("Slow");
+//        }
 
     }
 }
