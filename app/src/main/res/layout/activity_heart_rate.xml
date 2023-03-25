@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="start"
     android:background="@color/pink2"
-    tools:context=".Home_Heart_rate.Heart_Rate_Activity">
+    tools:context=".Home.Heart_Rate_Activity">
 
     <LinearLayout
         android:id="@+id/ll_heart_rate"
@@ -50,8 +50,57 @@
             android:layout_marginBottom="@dimen/_5sdp"
             android:background="@color/black" />
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cv_measure_now"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/white">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="start">
+
+                    <ImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/hart_rate2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="Measure your Heart rate simply by using your finger"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_measure_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:backgroundTint="@color/Dark_Gray"
+                    android:text="Measure Now"
+                    android:textSize="@dimen/_12sdp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -80,7 +129,7 @@
                         android:layout_marginLeft="@dimen/_15sdp"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/cholesterol" />
+                        android:src="@drawable/add_manually" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -90,17 +139,17 @@
                         android:padding="@dimen/_10sdp"
                         android:gravity="center"
                         android:textColor="@color/black"
-                        android:text="Analyze your cholesterol to see if it is normal"/>
+                        android:text="Manually add a heart rate reading you've already got"/>
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_analyze"
+                    android:id="@+id/btn_add_manually"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
                     android:backgroundTint="@color/Dark_Gray"
-                    android:text="Analyze"
+                    android:text="Add Manually"
                     android:textSize="@dimen/_12sdp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

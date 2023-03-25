@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="start"
     android:background="@color/Red2"
-    tools:context=".Home_Heart_rate.Blood_Sugar_Activity">
+    tools:context=".Home.Blood_Sugar_Activity">
 
     <LinearLayout
         android:id="@+id/ll_blood_sugar"
@@ -49,9 +49,6 @@
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:background="@color/black" />
-
-
-
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

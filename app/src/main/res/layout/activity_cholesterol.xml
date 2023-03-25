@@ -7,8 +7,7 @@
     android:orientation="vertical"
     android:gravity="start"
     android:background="@color/yellow"
-    tools:context=".Home_Heart_rate.Cholesterol_Activity">
-
+    tools:context=".Home.Cholesterol_Activity">
 
     <LinearLayout
         android:id="@+id/ll_cholesterol"

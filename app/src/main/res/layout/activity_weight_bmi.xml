@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="start"
     android:background="@color/purple2"
-    tools:context=".Home_Heart_rate.Weight_BMI_Activity">
+    tools:context=".Home.Weight_BMI_Activity">
 
 
     <LinearLayout

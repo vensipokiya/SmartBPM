@@ -13,4 +13,13 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="NumberPickerTheme" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@android:color/darker_gray </item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/Red3</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

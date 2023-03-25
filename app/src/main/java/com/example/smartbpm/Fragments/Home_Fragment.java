@@ -9,19 +9,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.smartbpm.Home_Heart_rate.Blood_Sugar_Activity;
-import com.example.smartbpm.Home_Heart_rate.Blood_pressure_Activity;
-import com.example.smartbpm.Home_Heart_rate.Cholesterol_Activity;
-import com.example.smartbpm.Home_Heart_rate.Daily_challenge_Activity;
-import com.example.smartbpm.Home_Heart_rate.Food_Scanner_Activity;
-import com.example.smartbpm.Home_Heart_rate.Heart_Rate_Activity;
-import com.example.smartbpm.Home_Heart_rate.Step_Counter_Activity;
-import com.example.smartbpm.Home_Heart_rate.Weight_BMI_Activity;
+import com.example.smartbpm.Home.Blood_Sugar_Activity;
+import com.example.smartbpm.Home.Blood_pressure_Activity;
+import com.example.smartbpm.Home.Cholesterol_Activity;
+import com.example.smartbpm.Home.Daily_challenge_Activity;
+import com.example.smartbpm.Home.Food_Scanner_Activity;
+import com.example.smartbpm.Home.Heart_Rate_Activity;
+import com.example.smartbpm.Home.Weight_BMI_Activity;
 import com.example.smartbpm.R;
 
 public class Home_Fragment extends Fragment {
@@ -78,14 +74,6 @@ public class Home_Fragment extends Fragment {
                 startActivity(i);
             }
         });
-        ll_step_counter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(context, Step_Counter_Activity.class);
-                startActivity(i);
-            }
-        });
-
 
         ll_cholesterol.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/white2"
+    tools:context=".Home_Heart_rate.Measure_HeartRate_Activity">
+
+    <LinearLayout
+        android:id="@+id/ll_measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_chevron_left_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Measure"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/volume"
+            android:layout_weight="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_volume_up_24"/>
+
+        <ImageView
+            android:id="@+id/flash"
+            android:layout_weight="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_flash_on_24"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/ll_measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/lottie"
+            app:lottie_loop="true"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/bg_button_white"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="how to use ?"
+                        android:textSize="@dimen/_18sdp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. Place gently one fingertip on the phone camera. Make sure it fully covers the lens(NOT the flashlight, which is hot)."
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2. stay still until the measuring is done !"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3. for accurate result, please measure is good lighting or with the flashlight on."
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

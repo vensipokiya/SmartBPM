@@ -2,35 +2,34 @@ package com.example.smartbpm;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.smartbpm.Fragments.Home_Fragment;
 import com.example.smartbpm.Fragments.Insights_Fragment;
 import com.example.smartbpm.Fragments.Profile_Fragment;
 import com.example.smartbpm.Fragments.Setting_Fragment;
-import com.example.smartbpm.Home_Heart_rate.Heart_Rate_Activity;
+import com.example.smartbpm.Home.Heart_Rate_Activity;
+import com.example.smartbpm.Home_Heart_rate.Measure_HeartRate_Activity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.snackbar.Snackbar;
 
 public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     FrameLayout frameLayout;
    FloatingActionButton floatingActionButton;
+
 
     Home_Fragment home_fragment = new Home_Fragment();
     Insights_Fragment insights_fragment = new Insights_Fragment();
@@ -43,10 +42,16 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        Window window = HomeActivity.this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setStatusBarColor(ContextCompat.getColor(HomeActivity.this, R.color.lite_pink));
+        }
+
         bottomNavigationView = findViewById(R.id.bottom_menu);
         frameLayout=findViewById(R.id.frameLayout);
         floatingActionButton=findViewById(R.id.heart_rate);
-
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, home_fragment).commit();
 
@@ -74,7 +79,8 @@ public class HomeActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(HomeActivity.this, "this is floating bar", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(HomeActivity.this,Heart_Rate_Activity.class);
+                startActivity(i);
             }
         });
     }

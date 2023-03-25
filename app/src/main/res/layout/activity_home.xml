@@ -22,6 +22,7 @@
         android:layout_gravity="bottom"
         android:backgroundTint="#F2F2F2"
         app:fabCradleMargin="10dp"
+        app:subtitleTextColor="@color/black"
         app:fabCradleRoundedCornerRadius="15dp"
         app:fabCradleVerticalOffset="5dp">
 
@@ -30,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
+            app:itemTextColor="@color/black"
             app:elevation="0dp"
             app:itemIconTint="#1E2D4C"
             app:menu="@menu/menu" />
